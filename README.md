@@ -1,30 +1,9 @@
-# hellovue
+# 我的书签页
 
-> A Vue.js project
+> 一个 Vue.js 工程
 
-## Build Setup
+Vue + Elements UI
 
-``` bash
-# install dependencies
-npm install
+# 项目介绍
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+项目介绍可参考我的 Vue 系列博文：https://dp2px.com/categories/JavaScript/Vue-js/
