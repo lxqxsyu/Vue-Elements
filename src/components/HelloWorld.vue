@@ -20,7 +20,7 @@
           text-color="#fff"
           @select="changeMenu"
           active-text-color="6B97FF">
-          <el-menu-item v-for="(item,index,key) in bookmarks" :key="key" :index="(index).toString()">
+          <el-menu-item v-for="(item, key) in bookmarks" :key="key" :index="(key).toString()">
             <i class="el-icon-collection-tag"></i>
             <span slot="title"> {{ item.typename }} </span>
           </el-menu-item>

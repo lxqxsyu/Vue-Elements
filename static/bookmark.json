@@ -1,16 +1,4 @@
 [
-    {"typename": "工作", "datas":[
-        {"url": "http://zentao.app.xiaozhuschool.com", "name": "正道", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "http://192.168.1.37/zentao/my/", "name": "禅道", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "https://lanhuapp.com/web/#/item?fid=all&commonly=", "name": "蓝湖", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "http://180.76.111.235:3000/user/login", "name": "Git仓库", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "https://www.showdoc.cc/328691116217939?page_id=1888601609042478", "name": "蒙艺接口文档", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "http://mengyi.sxitdlc.com/dlc/index/index.html#", "name": "蒙艺后台地址", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "https://www.showdoc.cc/boxdemo?page_id=1932469426371271", "name": "耗材柜接口文档", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "http://box-demo.sxitdlc.com/Dlc/public/login.html", "name": "耗材柜后台地址", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "https://www.showdoc.cc/jkws?page_id=2180523817410882", "name": "健康卫士接口文档", "img": "https://dp2px.com/links/logo/default-logo.png"},
-        {"url": "http://health.sxitdlc.com/admin/login/index.html", "name": "健康卫士后台地址", "img": "https://dp2px.com/links/logo/default-logo.png"}
-    ]},
     {"typename": "统计SEO", "datas":[
         {"name": "Google统计", "img": "https://dp2px.com/links/logo/default-logo.png", "url": "https://analytics.google.com/analytics/web/#/report-home/a126693399w185954214p183036629"},
         {"name": "百度统计", "img": "https://dp2px.com/links/logo/default-logo.png", "url": "https://tongji.baidu.com/web/welcome/login"},
