@@ -3,7 +3,7 @@
     <el-header height="80px" >
       <div id="top-bookmark">
          <el-button class="el-icon-s-home"> 首页 </el-button>
-        <el-tooltip v-for="item in awaysuse" :key="item" class="item" effect="dark" :content="item.descript" placement="bottom" >
+        <el-tooltip v-for="(item,key) in awaysuse" :key="key" class="item" effect="dark" :content="item.descript" placement="bottom" >
           <el-button><el-link :underline="false" target="_blank" :href="item.url"> {{ item.name }} </el-link></el-button>
         </el-tooltip>
       </div>
@@ -18,8 +18,9 @@
           class="el-menu-vertical-demo"
           background-color="#F56C6C"
           text-color="#fff"
+          @select="changeMenu"
           active-text-color="6B97FF">
-          <el-menu-item v-for="(item,key) in bookmarks" :key="item.id" @click="changeMenu(key)">
+          <el-menu-item v-for="(item,index,key) in bookmarks" :key="key" :index="(index).toString()">
             <i class="el-icon-collection-tag"></i>
             <span slot="title"> {{ item.typename }} </span>
           </el-menu-item>
@@ -28,13 +29,14 @@
       </el-aside>
       <el-container id="content-container">
         <el-carousel id="banner" :interval="4000" type="card" height="200px">
-          <el-carousel-item v-for="(item,key) in banners" :key="item.id">
+          <el-carousel-item v-for="(item,key) in banners" :key="key">
             <el-image :src="item.url"></el-image>
           </el-carousel-item>
         </el-carousel>
         <div id="bookmarks">
-            <div style="min-width:10px;margin:0 auto;">
-              <el-card class="box-card" v-for="item in bookmarks[keyindex].datas" :key="item">
+            <div style="min-width:10px;margin:0 auto;" v-if='bookmarks.length>0'>
+         
+              <el-card class="box-card" v-for="(item,key) in bookmarks[keyindex].datas" :key="key">
                 <el-link :underline="false" target="_blank" :href="item.url"><el-avatar :size="50" :src="item.img"></el-avatar></el-link>
                 <p> {{ item.name }}</p>
               </el-card>
@@ -61,18 +63,18 @@ export default {
     }
   },
   created(){
-    axios.get('static/test.json').then(response => {
+    axios.get('http://qiniucdn.dp2px.com/test.json').then(response => {
       this.banners = response.data
     });
-    axios.get('static/bookmark.json').then(response => {
+    axios.get('http://qiniucdn.dp2px.com/bookmark.json').then(response => {
       this.bookmarks = response.data
     });
-    axios.get('static/aways-use.json').then(response => {
+    axios.get('http://qiniucdn.dp2px.com/aways-use.json').then(response => {
       this.awaysuse = response.data
     });
   },
   methods: {
-    changeMenu(key){
+    changeMenu(key, i){
       console.log(key)
       this.keyindex = key;
       //this.showbookmark = this.bookmarks[key].datas
